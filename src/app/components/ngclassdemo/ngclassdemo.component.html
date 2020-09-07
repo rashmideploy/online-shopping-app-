@@ -1,0 +1,30 @@
+<div [ngStyle]="{'background-color':'red'}">Happy </div>
+
+
+
+<!-- <div [ngStyle]="{'background-color':people.country === 'UK' ? 'green' : 'red' }">
+</div> -->
+
+
+<h4>NgStyle</h4>
+<ul *ngFor="let person of people">
+    <li [ngStyle]="{'color':getColor(person.country)}">
+        {{ person.name }}
+        {{ person.country }}
+    </li>
+</ul>
+
+
+<h4>NgStyle</h4>
+<div class="container">
+    <h4>NgClass Example</h4>
+    <div *ngFor="let celeb of ST">
+        <p [ngClass]="{
+        'text-success':celeb.country === 'USA',
+        'text-primary':celeb.country === 'UK',
+        'text-danger':celeb.country === 'Canada'
+      }">{{ celeb.actor }} ({{ celeb.country }})
+        </p>
+    </div>
+</div>
+
